@@ -33,6 +33,20 @@ body, html{
 }
 .controls{
     height: 25%;
-    background: brown
+    background: brown;
+    display: flex;
+    flex-wrap: wrap;
+}
+.controls p{
+    width: 100%;
+    margin: 0;
+    font: 30pt Arial;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.controls button{
+    box-sizing: border-box;
 }
 
