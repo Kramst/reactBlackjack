@@ -1,0 +1,38 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container *{
+    width: 50%;
+}
+.title{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(161, 15, 44);
+}
+.title p{
+    width: min-content;
+    margin: 0;
+    text-align: center;
+    font: 40pt Arial;
+}
+.cardTable{
+    height: 60%;
+    background: white;
+}
+.controls{
+    height: 25%;
+    background: brown
+}
+
