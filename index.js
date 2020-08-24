@@ -11,6 +11,11 @@ const getCard = player =>{
         .then(card => card = card.cards[0])
         .then(card => {
             let points = document.querySelector('.points')
-            isNaN(+card.value) ? points.innerHtml += 10 : points.innerHtml += (+card.value)
+            points = parseInt(points.innerHTML, 10)
+            if(card.value === 'ACE'){
+                points + 11 > 21 ? points += 1 : points += 11
+            }
+            else isNaN(+card.value) ? points += 10 : points += (+card.value)
+            document.querySelector('.points').innerHTML = points
         })
 }
