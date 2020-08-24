@@ -3,7 +3,7 @@
     <link href='style.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body onload='getCards()'>
+<body onload='getDecks()'>
     <div class='container'>
         <div class='title'>
             <p>BLACKJACK</p>
@@ -13,8 +13,8 @@
         </div>
         <div class='controls'>
             <p class='points'>0</p>
-            <button onclick='getCard(player)'>HIT</button>
-            <button onclick='getcard(computer)'>STOP</button>
+            <button onclick='getCard("player")'>HIT</button>
+            <button onclick='getcard("computer")'>STOP</button>
         </div>
     </div>
     <script src='index.js'></script>
