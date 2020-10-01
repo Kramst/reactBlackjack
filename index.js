@@ -1,4 +1,4 @@
-let deck, card
+let deck, card, pile = []
 const getDecks = () =>{
     fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6')
         .then(newDeck => newDeck.json())
@@ -11,11 +11,7 @@ const getCard = player =>{
         .then(card => card = card.cards[0])
         .then(card => {
             let points = document.querySelector('.points')
-            points = parseInt(points.innerHTML, 10)
-            if(card.value === 'ACE'){
-                points + 11 > 21 ? points += 1 : points += 11
-            }
-            else isNaN(+card.value) ? points += 10 : points += (+card.value)
+            points = calcValue(card, points)
             document.querySelector('.points').innerHTML = points
         })
 }
